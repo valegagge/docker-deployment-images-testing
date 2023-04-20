@@ -534,7 +534,7 @@ jobs:
         #   uses: peter-evans/repository-dispatch@v1
         #   with:
         #     token: ${{ secrets.GITHUB_TOKEN  }}
-        #     repository: {{ }}
+        #     repository: ${{ env.REPOSITORY_NAME }}
         #     event-type: app_testing_from_code
         #     client-payload: '{"type": "app_testing_from_code", "app_list": "${{ steps.get_args.outputs.demos_matrix }}", "img_list": "icubteamcode/${{matrix.apps}}", "version_list": ${{steps.get_version.outputs.VERSION}}-${{steps.get_version.outputs.TAG}}, "tag_list": "sources", "children_flag": ${{needs.check_files.outputs.children_flag}}}'
 
@@ -543,7 +543,7 @@ jobs:
         #   uses: peter-evans/repository-dispatch@v1
         #   with:
         #     token: ${{ secrets.GITHUB_TOKEN  }}
-        #     repository: {{ }}
+        #     repository: ${{ env.REPOSITORY_NAME }}
         #     event-type: app_testing_from_code
         #     client-payload: '{"type": "app_testing_from_code", "app_list": "${{ steps.get_args.outputs.demos_matrix }}","img_list": "icubteamcode/${{matrix.apps}}", "version_list": ${{steps.get_version.outputs.VERSION}}-${{steps.get_version.outputs.TAG}}, "tag_list": "binaries", "children_flag": ${{needs.check_files.outputs.children_flag}}}'
           
